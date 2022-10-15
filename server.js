@@ -13,6 +13,10 @@ app.use(cors())
 app.use(express.json())
 app.use(express.urlencoded({extended:true}))
 
+
+app.get('/',  (req, res )=> {
+  res.send("hello world")
+} );
 app.use('/api/seed/', seedRouter);
 app.use('/api/cars/', carsRouter);
 app.use('/api/users/', userRouter);
